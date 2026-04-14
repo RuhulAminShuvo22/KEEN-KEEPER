@@ -10,3 +10,11 @@ import { TimelineProvider } from "./context/TimelineContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <TimelineProvider>
+      <App />
+      <ToastContainer position="top-right" />
+    </TimelineProvider>
+  </React.StrictMode>
+);
