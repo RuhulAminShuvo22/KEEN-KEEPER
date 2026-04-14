@@ -1,52 +1,54 @@
-import hero from "../assets/hero.png";
+//import hero from "../assets/hero.png";
 
 export default function Banner() {
   return (
-    <div className="relative bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-16 px-6">
+    <div className="bg-gray-100 py-16 px-6 text-center">
 
-      {/* Content */}
-      <div className="max-w-6xl mx-auto text-center">
+      {/* Title */}
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+        Friends to keep close in your life
+      </h1>
 
-        <img src={hero} className="w-40 mx-auto mb-6 drop-shadow-xl" />
+      {/* Subtitle */}
+      <p className="text-gray-500 text-sm md:text-base max-w-xl mx-auto mb-6">
+        Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
+      </p>
 
-        <h1 className="text-4xl md:text-5xl font-bold mb-3">
-          Stay Connected 💙
-        </h1>
+      {/* Button */}
+      <button className="bg-green-800 text-white px-5 py-2 rounded-md text-sm font-medium 
+      hover:bg-green-900 transition duration-300 shadow-sm hover:shadow-[0_0_12px_rgba(34,197,94,0.6)]">
+        + Add a Friend
+      </button>
 
-        <p className="text-lg opacity-90 mb-6">
-          Track your friendships & never lose touch again
-        </p>
+      {/* Stats */}
+      <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
 
-        <button className="btn bg-white text-black hover:bg-gray-200 border-none">
-          ➕ Add a Friend
-        </button>
+        {/* Card 1 */}
+        <div className="bg-white rounded-lg shadow-sm py-6 hover:shadow-md transition">
+          <h2 className="text-2xl font-bold text-gray-800">10</h2>
+          <p className="text-sm text-gray-500 mt-1">Total Friends</p>
+        </div>
 
-        {/* Summary Cards */}
-        <div className="grid md:grid-cols-4 gap-4 mt-10">
+        {/* Card 2 */}
+        <div className="bg-white rounded-lg shadow-sm py-6 hover:shadow-md transition">
+          <h2 className="text-2xl font-bold text-gray-800">3</h2>
+          <p className="text-sm text-gray-500 mt-1">On Track</p>
+        </div>
 
-          <div className="bg-white/20 backdrop-blur-md rounded-xl p-4 shadow">
-            <h2 className="text-xl font-bold">12</h2>
-            <p>Total Friends</p>
-          </div>
+        {/* Card 3 */}
+        <div className="bg-white rounded-lg shadow-sm py-6 hover:shadow-md transition">
+          <h2 className="text-2xl font-bold text-gray-800">6</h2>
+          <p className="text-sm text-gray-500 mt-1">Need Attention</p>
+        </div>
 
-          <div className="bg-white/20 backdrop-blur-md rounded-xl p-4 shadow">
-            <h2 className="text-xl font-bold">4</h2>
-            <p>Overdue</p>
-          </div>
-
-          <div className="bg-white/20 backdrop-blur-md rounded-xl p-4 shadow">
-            <h2 className="text-xl font-bold">5</h2>
-            <p>Almost Due</p>
-          </div>
-
-          <div className="bg-white/20 backdrop-blur-md rounded-xl p-4 shadow">
-            <h2 className="text-xl font-bold">3</h2>
-            <p>On Track</p>
-          </div>
-
+        {/* Card 4 */}
+        <div className="bg-white rounded-lg shadow-sm py-6 hover:shadow-md transition">
+          <h2 className="text-2xl font-bold text-gray-800">12</h2>
+          <p className="text-sm text-gray-500 mt-1">Interactions This Month</p>
         </div>
 
       </div>
+
     </div>
   );
 }
