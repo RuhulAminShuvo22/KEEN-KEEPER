@@ -12,29 +12,69 @@ export default function Timeline() {
       ? timeline
       : timeline.filter((t) => t.type === filter);
 
+  const getIcon = (type) => {
+    if (type === "Call") return "📞";
+    if (type === "Text") return "💬";
+    if (type === "Video") return "🎥";
+    return "🤝";
+  };
+
   return (
     <>
       <Navbar />
 
-      <div className="p-6">
-        <h1 className="text-2xl font-bold">Timeline</h1>
+      <div className="min-h-screen bg-gray-100 py-8 px-4">
+        <div className="max-w-3xl mx-auto">
 
-        <select
-          className="select mt-3"
-          onChange={(e) => setFilter(e.target.value)}
-        >
-          <option>All</option>
-          <option>Call</option>
-          <option>Text</option>
-          <option>Video</option>
-        </select>
+          {/* Title */}
+          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+            Timeline
+          </h1>
 
-        {filtered.map((t, i) => (
-          <div key={i} className="card p-3 mt-3">
-            <p className="font-semibold">{t.title}</p>
-            <small>{t.date}</small>
+          {/* Filter */}
+          <select
+            className="w-full md:w-64 p-2 border rounded-lg bg-white shadow-sm mb-6"
+            onChange={(e) => setFilter(e.target.value)}
+          >
+            <option>All</option>
+            <option>Call</option>
+            <option>Text</option>
+            <option>Video</option>
+          </select>
+
+          {/* Timeline Items */}
+          <div className="space-y-3">
+            {filtered.map((t, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition"
+              >
+                {/* Icon */}
+                <div className="text-2xl">
+                  {getIcon(t.type)}
+                </div>
+
+                {/* Content */}
+                <div>
+                  <p className="font-semibold text-gray-800">
+                    {t.title}
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    {t.date}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+      </div>
+
+      {/* Footer (improved look) */}
+      <div className="bg-green-900 text-white text-center py-10 mt-10">
+        <h2 className="text-2xl font-bold">KeenKeeper</h2>
+        <p className="text-sm mt-2 opacity-80">
+          Your personal shelf of meaningful connections.
+        </p>
       </div>
 
       <Footer />
