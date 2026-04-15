@@ -34,7 +34,7 @@ ________________________________________
 •	⏳ Loading spinner
 ________________________________________
 🌍 Live Demo
-👉 https://quiet-cajeta-422e85.netlify.app/
+👉 https://fabulous-valkyrie-4de81f.netlify.app/
 ________________________________________
 📂 Project Structure
 src/
