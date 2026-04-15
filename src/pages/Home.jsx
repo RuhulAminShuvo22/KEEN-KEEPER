@@ -38,7 +38,8 @@ export default function Home() {
 
   return (
     <>
-      
+      <Navbar />
+      <Banner />
 
       {/* 🔍 Search + Sort */}
       <div className="flex flex-col md:flex-row gap-3 justify-center mt-6">
