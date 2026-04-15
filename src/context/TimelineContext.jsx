@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
 
-export const TimelineContext = createContext();
+export const TimelineContext = createContext(); //ignoring error//
+
 
 export const TimelineProvider = ({ children }) => {
   const [timeline, setTimeline] = useState([]);
