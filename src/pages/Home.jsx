@@ -20,7 +20,7 @@ export default function Home() {
       });
   }, []);
 
-  // 🔥 SMART SEARCH + SORT
+  //  SMART SEARCH + SORT
   const filtered = friends
     .filter((f) =>
       f.name.toLowerCase().includes(search.toLowerCase()) ||

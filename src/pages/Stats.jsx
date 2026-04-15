@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 export default function Stats() {
   const { timeline } = useContext(TimelineContext);
 
-  // 🔹 Logic unchanged
+  //  Logic unchanged
   const count = { Call: 0, Text: 0, Video: 0 };
   timeline.forEach((t) => count[t.type]++);
 
@@ -17,7 +17,7 @@ export default function Stats() {
     { name: "Video", value: count.Video },
   ];
 
-  // 🎨 Updated colors (more premium look)
+  //  Updated colors (more premium look)
   const COLORS = ["#22c55e", "#7c3aed", "#065f46"];
 
   return (
@@ -47,7 +47,7 @@ export default function Stats() {
               <Pie
                 data={data}
                 dataKey="value"
-                innerRadius={70}   // 🔥 donut style
+                innerRadius={70}   //  donut style
                 outerRadius={100}
                 paddingAngle={5}
               >
@@ -62,7 +62,6 @@ export default function Stats() {
           </div>
         </div>
       </div>
-
       <Footer />
     </>
   );
