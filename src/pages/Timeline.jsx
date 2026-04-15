@@ -69,14 +69,6 @@ export default function Timeline() {
         </div>
       </div>
 
-      {/* Footer (improved look) */}
-      <div className="bg-green-900 text-white text-center py-10 mt-10">
-        <h2 className="text-2xl font-bold">KeenKeeper</h2>
-        <p className="text-sm mt-2 opacity-80">
-          Your personal shelf of meaningful connections.
-        </p>
-      </div>
-
       <Footer />
     </>
   );
